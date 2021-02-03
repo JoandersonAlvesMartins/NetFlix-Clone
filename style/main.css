@@ -1,0 +1,111 @@
+:root{
+    --vermelho:#E50914;
+    --preta:#141414;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Alinhamentos basicos*/
+
+body{
+    background: var(--preta);
+    font-family: 'Arial', Times, serif;
+    color:white;
+}
+
+header .container{
+    display: flex; /* colocando todos os elementos nas mesma linha*/
+    flex-direction: row; /* indicando que os elemento vão ficar na mesma linha*/
+    align-items: center; /* centralizando os elementos em tela, na vertical*/
+    justify-content: space-between; /*disponibilizando os elementos de forma horizontal*/
+}
+
+header .logo{
+    margin-left: 5px; /*aplicando margin a esquerda na logo*/
+    color: var(--vermelho);
+    font-family: 'Arial Black', Times;
+    font-size: 40px; /*peso da fonte*/
+}
+
+header nav a{
+    text-decoration: none; /* removendo a decoração do texto*/
+    color: #AAA;
+    margin-right: 10px; /* espaçamento entre os testos*/
+
+}
+
+header nav a:hover{ /* criando um evento ou animação ao passar o mouse por cima */
+    color: #fff;
+}
+
+/* configurações dos filmes*/
+.filme-principal{
+    font-size: 16px;
+    /* construindo uma camada de sombra gradiente entre o testo e a imagem com o comando --> linear-gradient(rgba(0,0,0,.50), rgba(0,0,0,.50)100%), <--*/
+    background: linear-gradient(rgba(0,0,0,.50), rgba(0,0,0,.50)100%), url('/img/capa-house.jpg');
+   
+    height: 400px; /* definindo o tamanho da caixa*/
+    background-size: cover; /* expecificandoo tamanho da imagem, o cover significa que a imagem vai pegar a área de cobertura da caixa*/
+    
+    display: flex; /* coloca todos os elementos em linha*/
+    flex-direction: column; /* a disposição dos elementos será em colunas*/
+    /* o justiy-content segui sempre a direção do flex-direction, neste caso em colunas*/
+    justify-content: center;/* centralizando os elementos diacordo com a posição do flex-direction*/
+    align-items: flex-start;/* posicionando os elementos em linha da esquerda para a direita*/
+}
+
+.filme-principal .descricao{
+    margin-top: 10px;
+    margin-bottom: 40px;
+}
+
+.filme-principal .titulo{
+    margin-top: 15%;
+    font-size: 40px;
+    font-family: 'Trebuchet MS', Arial, sans-serif;
+}
+
+.filme-principal .botao{
+    background-color: rgba(0,0,0,.50);
+    border: none;/* removendo a cor da borda padrão*/
+    color: white; /* cor do texto*/
+    padding: 15px 30px;/* crando um expaço interno entre os elementos, quando coloco apenas um valor, ele colocar para todos por padrão, mais, tambem posso definir u valor para cada posição.*/
+    margin-right: 15px; /* criando u expaçamento entre os botões*/
+    font-size: 12px;
+
+    cursor: pointer; /* mudando o cursor quando colocado em cima de um botão*/
+    transition: .3s ease all;/*criando um efeito de transição quando passar o mouse sobre o botão*/
+}
+
+.filme-principal .botao:hover{ /* hover significa escutar.*/
+    background-color: white;/* criando uma animação quando o mouse estiver em cima do botão, madar para a cor branca*/
+    color: black; /* quando o mouse não estiver em cima, mudarr para a cor preta*/
+}
+
+.filme-principal .botao i{
+    margin-right: 8px; /* criando uma margin entre o icone e o texto do botão*/
+}
+
+.container{
+    margin-left: 20px;
+}
+
+.filme-principal .container{
+    width: 70%;
+}
+
+/* Configurações das imagens */
+.box-filme{
+    height: 100%;
+    width: 100%;
+    display: block;
+    cursor: pointer;
+}
+
+.carrosel-filmes{
+    margin-top: 5px;
+}
